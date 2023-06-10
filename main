@@ -1,0 +1,13 @@
+clc;
+clear all;
+A=rand(20,100)+0.1;
+W0 = rand(20,10) + 0.1;     
+H0 = rand(10, 100) + 0.1;    
+[T, W, H, Func]=FWEucNMF(A, W0, H0, 300, 20 );
+[T1, W1, H1, Func1]=EWEucNMF(A, W0, H0, 300, 2^8 );
+disp(W);
+disp(H);
+disp(W1);
+disp(H1);
+disp(Func);
+disp(Func1);
